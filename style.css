@@ -51,9 +51,9 @@ nav ul li a:hover{
     font-size: 4em;
 }
 .main-data p{
-    line-height: 10px;
     font-size: 2em;
     font-weight: 300;
+   
 }
 .main-data button{
     display: inline-block;
@@ -71,7 +71,7 @@ nav ul li a:hover{
     flex-direction: row;
     padding: 1rem;
     background-color: #f2ece4;
-    padding: 10em;
+    padding: 5em;
 }
 .about img {
     margin: 0 auto;
@@ -94,6 +94,135 @@ nav ul li a:hover{
     font-size: 3em;
 
 }
+.categories {
+    text-align: center;
+    padding: 4em;
+    background-color: #f4f4f4;
+}
+.store{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em 4em;
+    column-gap: 30px;
+    justify-content: center;
+    
+}
+.card{
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    transition: transform 0.3s;
+    overflow: hidden;
+    z-index: 1;
+    grid-area: 10px;
+}
+.card:hover {
+    transform: scale(1.1);
+}
+.wrap {
+    color: white;
+}
+.wrapper{
+    display: flex;
 
+}
+.container {
+    background-color: #f2ece4;
+    text-align: center;
+   width: 30%;
+   padding-top: 10em;
+}
+.container h1{
+    font-size: 4em;
+    text-align: left;
+    padding: 0 1em;
+}
+.container p{
+    font-size: 1.5em;
+    text-align: left;
+    margin-left: 3em;
+    font-weight: 300;
+    line-height: 10px;
+}
+.services{
+    text-align: center;
+    padding: 4em;
+    background-color: #f4f4f4;
+}
+.sections{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    justify-content: center;
+    gap: 10px;
+   padding: 1em 5em;
+}
+.section{
+    background-color: #f2ece4;
+    text-align: justify;
+    padding-top: 30%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.testimonials{
+    text-align: center;
+    padding: 2em;
+    background-color: #f2ece4;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 2em;
+}
+.checked{
+    color: orange;
+}
+.container1{
+    background-color: white;
+    padding: 20px;
+}
+.container1 h2{
+    text-align: left;
+}
+.container1 p{
+    font-weight: 300;
+}
+.contact{
+    text-align: center;
+    background-color: #f2ece4;
+    padding: 2em;
+}
+form {
+    max-width: 500px;
+    text-align: left;
+    line-height: 6em;
+    overflow: hidden;
+}
+form input,
+form textarea{
+    width: 89%;
+    padding: 1.5rem;
+    border-radius: 5px;
+    
 
+}
+.btn {
+    display: inline-block;
+    padding: 1rem;
+    background-color: #d0ae81;
+    width: 100%;
+    border-radius: 20px;
+    line-height: 20px;
+}
+.content{
+    line-height: 2rem;
+    margin-right: 20em;
+    
+}
+.content a{
+    text-decoration: none;
+}
 
