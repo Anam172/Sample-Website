@@ -3,24 +3,22 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-    height: 50px;
     position: sticky;
     top: 0;
-    overflow: hidden;
+   overflow: visible;
+    z-index: 1000;
+    background-color: white;
+    height: 40px;
 }
 .header-bar span{
     font-size: 20px;
     position: relative;
-    top : -20px;
-    
+    top: -20px;
 }
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: right;
     gap: 1rem;
-    
-    
 }
 nav ul li a{
     text-decoration: none;
@@ -29,10 +27,12 @@ nav ul li a{
     font-size: 20px;
     padding: 0.5rem ;
 }
-nav ul li a:hover{
+nav ul li a:hover,
+nav ul li a.active{
     border: 1px solid #d0ae81;
     color: #d0ae81;
     border-radius: 20px;
+    padding: 5px 10px;
 }
 .hero {
     display: flex;
@@ -46,14 +46,12 @@ nav ul li a:hover{
 }
 .main-data h1{
     font-weight: 800;
-    max-width: 40px;
-    line-height: 50pt;
+    max-width: 20rem;
     font-size: 4em;
 }
 .main-data p{
     font-size: 2em;
     font-weight: 300;
-   
 }
 .main-data button{
     display: inline-block;
@@ -99,6 +97,9 @@ nav ul li a:hover{
     padding: 4em;
     background-color: #f4f4f4;
 }
+.categories a{
+    text-decoration: none;
+}
 .store{
     display: flex;
     flex-wrap: wrap;
@@ -107,6 +108,7 @@ nav ul li a:hover{
     justify-content: center;
     
 }
+
 .card{
     width: 300px;
     height: 300px;
@@ -123,6 +125,12 @@ nav ul li a:hover{
     transform: scale(1.1);
 }
 .wrap {
+    color: white;
+    padding-top: 3em;
+    font-size: 2em;
+}
+.wrapp{
+    font-size: 1em;
     color: white;
 }
 .wrapper{
@@ -195,6 +203,10 @@ nav ul li a:hover{
     background-color: #f2ece4;
     padding: 2em;
 }
+.btn-categories,
+.btn-contact {
+    cursor: pointer;
+}
 form {
     max-width: 500px;
     text-align: left;
@@ -216,6 +228,7 @@ form textarea{
     width: 100%;
     border-radius: 20px;
     line-height: 20px;
+    cursor: pointer;
 }
 .content{
     line-height: 2rem;
@@ -225,4 +238,245 @@ form textarea{
 .content a{
     text-decoration: none;
 }
+.wrapper2{
+    margin: 2em;
+    text-align: center;
+}
+.wrapper2 ul{
+    list-style: none;
+    display: flex;
+     gap: 1em; 
+     width: 30%;
+     margin:auto;
+    text-align: center;
+}
+.wrapper2 ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+    font-size: 16px;
+    padding: 10px;
+}
+#chat{
+    position: fixed;
+    right: 1.5rem;
+    bottom: 2%;
+    cursor: pointer;
+    color: black;
+    background-color: #d0ae81;
+    padding: 1rem;
+    border-radius: 40px;
+    font-size: 25px;
+}
+#chat::before{
+    content: icon;
+}
+#chat:hover::before{
+    content: "\f00d";
+    padding: 0 10px;
+}
+#social-icons{
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    bottom: 10%;
+    right: 1.5rem;
+    color: white;
+}
+ #whatsapp{
+    background-color: green;
+    font-size: 35px;
+    padding: 1rem;
+    border-radius: 40px;
+    text-align: center;
+}
+#call{
+    background-color: red;
+    font-size: 25px;
+    padding: 1rem;
+    border-radius: 40px;
+    text-align: center;
+}
+#chat:hover + #social-icons {
+    display: flex;
+}
+#scrollUp{
+    position: fixed;
+    bottom: 2%;
+    right: 6%;
+    color: white;
+    background-color: gray;
+    padding: 1rem;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.category{
+    background-color: #f2ece4;
+    margin:auto;
+    padding: 2px 20rem 8rem 20rem;
+    
+}
+.category h1{
+    text-align: center;
+    font-size: 4rem;
+}
+.category span{
+    color: #d0ae81;
+}
+.grid{
+    display: grid;
+    width: 300px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: white;
+}
+.grid h3, p{
+    margin: 14px;
+}
+.grid p{
+    font-size: 20px;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Responsive Queries */
+@media (max-width: 1200px) {
+    .header-bar {
+      flex-wrap: wrap;
+      padding: 0.5rem;
+    }
+    .header-bar span {
+      font-size: 18px;
+    }
+    nav ul {
+      gap: 0.5rem;
+    }
+    nav ul li a {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .hero {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .main-data {
+      margin: 50px auto;
+      padding: 1rem;
+      width: auto;
+    }
+    .main-data h1 {
+      font-size: 2.5em;
+    }
+    .main-data p {
+      font-size: 1.5em;
+    }
+    .main-data button {
+      font-size: 14px;
+      padding: 0.8rem 1.2rem;
+    }
+    .hero img {
+      width: 100%;
+    }
+    .about {
+      flex-direction: column;
+      padding: 2em;
+    }
+    .about img {
+      width: 100%;
+      margin: 0;
+    }
+    .data {
+      margin: 2em auto;
+      text-align: center;
+    }
+    .data h2 {
+      font-size: 2em;
+    }
 
+    .wrapper{
+        width: 100%;
+        overflow: hidden;
+    }
+    .container{
+        margin: 50px auto;
+      padding: 1rem;
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .store {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .card {
+      width: 100%;
+      height: 200px;
+    }
+    .sections {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .container {
+      width: 100%;
+      padding: 2em;
+    }
+    .container h1 {
+      font-size: 3em;
+    }
+    .container p {
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .header-bar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    nav ul {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .hero {
+      padding: 1em;
+    }
+    .main-data h1 {
+      font-size: 2em;
+    }
+    .main-data p {
+      font-size: 1.2em;
+    }
+    .main-data button {
+      font-size: 12px;
+      padding: 0.6rem 1rem;
+    }
+    .about {
+      padding: 1em;
+    }
+    .categories {
+      padding: 2em;
+    }
+    .card {
+      height: 150px;
+    }
+    .sections {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 1rem;
+    }
+    .flex {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

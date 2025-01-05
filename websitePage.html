@@ -8,6 +8,7 @@
         </title>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
+        <script src="functionality.js" defer></script>
     </head>
     <body>
         <header>
@@ -19,43 +20,43 @@
           <nav>
             <ul>
                 <li>
-                    <a href="hero">Home</a>
+                    <a href="#hero" class="active">Home</a>
                 </li>
                 <li>
-                    <a href="about">About</a>
+                    <a href="#about">About</a>
                 </li>
                 <li>
-                    <a href="store">Store</a>
+                    <a href="#categories">Store</a>
                 </li>
                 <li>
-                    <a href="services">Services</a>
+                    <a href="#services">Services</a>
                 </li>
                 <li>
-                    <a href="testimonials">Testimonials</a>
+                    <a href="#testimonials">Testimonials</a>
                 </li>
                 <li>
-                    <a href="contact">Contact</a>
+                    <a href="#contact">Contact</a>
                 </li>
                 <li>
-                    <a><i class="fas fa-shopping-cart"></i></a>
+                    <a style="border: none;"><i class="fas fa-shopping-cart"></i></a>
                 </li>
                 <li>
-                    <a><i class="fas fa-envelope"></i></a>
+                    <a style="border: none;"><i class="fas fa-envelope"></i></a>
                 </li>
             </ul>
           </nav>
           </div>
         </header>
-        <div class="hero">
+        <section class="hero" id="hero">
             <div class="main-data">
                 <h1><span style="color: #d0ae81;">COCO</span> Shades Extensions</h1>
                 <p>Enhancing Your<br> Natural Beauty</p>
-                <button>Shop Now!</button>
-                <button>Contact Us</button>
+                <button class="btn-categories">Shop Now!</button>
+                <button class="btn-contact">Contact Us</button>
             </div>
                <img src= https://files.cdn-files-a.com/uploads/9376397/2000_668eb3a1af9de.png alt="COCO Shades Extensions" style="width: 70%;" >
-        </div>
-        <div class="about">
+        </section>
+        <section class="about" id="about">
             <img src="https://files.cdn-files-a.com/uploads/9376397/800_gi-668fb86a0be51.jpg" alt="COCO Shades" >
             <div class="data">
                 <h2>About Us</h2>
@@ -63,29 +64,37 @@
                 <p>At Coco Extensions, we believe in enhancing the natural beauty of our clients with the finest quality hair extensions. Our team is dedicated to
                  providing a seamless blend and a perfect match, ensuring you look and feel amazing. Experience the transformation with our luxurious and professionally applied extensions.</p>
             </div>
-        </div>
-        <div class="categories">
+        </section>
+        <section class="categories" id="categories">
             <h2 style="font-size: 2em;">Categories</h2>
             <hr style="border-bottom: 4px solid#d0ae81; width: 10%;">
             <div class="store">
                 <div class="card"  style="background-image: url(https://files.cdn-files-a.com/uploads/9376397/800_gi-668eb9f864da6.jpg);">
-                        <p class="wrap" style="padding-top: 3em; font-size: 2em;">CLIP INS</p>
-                        <p class="wrap" style="font-size: 1em;">1 PRODUCTS</p>
+                    <a href="category1.html">
+                        <p class="wrap">CLIP INS</p>
+                        <p class="wrapp">1 PRODUCTS</p>
+                    </a>
                 </div>
                 <div class="card"  style="background-image:url(https://files.cdn-files-a.com/uploads/9376397/800_gi-668eba25b3db5.jpg);">
-                    <p class="wrap" style="padding-top: 3em; font-size: 2em;">WIGS</p>
-                    <p class="wrap" style="font-size: 1em;">1 PRODUCTS</p>
+                    <a href="category2.html">
+                    <p class="wrap">WIGS</p>
+                    <p class="wrapp">1 PRODUCTS</p>
+                    </a>
             </div>
             <div class="card"  style="background-image: url(https://files.cdn-files-a.com/uploads/9376397/800_gi-668eba7ee41a9.jpg);">
-                <p class="wrap" style="padding-top: 3em; font-size: 2em;">TAPES</p>
-                <p class="wrap" style="font-size: 1em;">1 PRODUCTS</p>
+                <a href="category3.html">
+                <p class="wrap">TAPES</p>
+                <p class="wrapp">1 PRODUCTS</p>
+                </a>
         </div>
         <div class="card"  style="background-image: url(https://files.cdn-files-a.com/uploads/9376397/800_gi-668eba935fad5.jpg);">
-            <p class="wrap" style="padding-top: 3em; font-size: 2em;">WEFTS</p>
-            <p class="wrap" style="font-size: 1em;">1 PRODUCTS</p>
+            <a href="category4.html">
+            <p class="wrap">WEFTS</p>
+            <p class="wrapp">1 PRODUCTS</p>
+            </a>
         </div>
          </div>
-        </div>
+        </section>
         <div class="wrapper">
                 <img src="https://files.cdn-files-a.com/uploads/9376397/2000_668ebc11be3f1_filter_668ebc7e54ced.png" style="width: 70%;">
 
@@ -96,7 +105,7 @@
                 <p>Transform Your Life</p>
             </div>
         </div>
-            <div class="services">
+            <section class="services" id="services">
                 <h1>Services</h1>
                 <hr style="border-bottom: 4px solid #d0ae81; width: 20%;">
                 <div class="sections">
@@ -119,8 +128,8 @@
                         <p>Our experts will match your extension color precisely to your natural hair, ensuring a flawless blend.</p>
                       </div>
                 </div>
-            </div>
-            <div class="testimonials">
+            </section>
+            <section class="testimonials" id="testimonials">
                 <h1>Testimonials</h1>
                 <hr style="border-bottom: 4px solid #d0ae81; width: 20%;">
                 <div class="flex">
@@ -143,10 +152,10 @@
                         <i class="fas fa-star checked"></i>
                     </div>
                 </div>
-            </div>
+            </section>
             <div style="background-image: url(https://files.cdn-files-a.com/uploads/9376397/2000_668fb80fd4b09.png); height: 800px; background-position: center;">
             </div>
-            <div class="contact">
+            <section class="contact" id="contact">
                 <h1>Contact</h1>
                 <hr style="border-bottom: 4px solid #d0ae81; width: 20%;">
                 <div class="flex">
@@ -167,6 +176,37 @@
                         <button type="submit" class="btn" >Contact Us</button>
                     </form>
                 </div>
+            </section>
+            <footer class="wrapper2">
+                    <ul>
+                        <li>
+                            <a href="hero">Home</a>
+                        </li>
+                        <li>
+                            <a href="about">About</a>
+                        </li>
+                        <li>
+                            <a href="store">Store</a>
+                        </li>
+                        <li>
+                            <a href="services">Services</a>
+                        </li>
+                        <li>
+                            <a href="testimonials">Testimonials</a>
+                        </li>
+                        <li>
+                            <a href="contact">Contact</a>
+                        </li>
+                    </ul>
+                    <p>Copyright &copy; 2025 All rights reserved - COCO Extensions</p>   
+            </footer>
+            
+            <div class="fas fa-comments" id="chat"></div>
+            
+            <div id="social-icons">
+                <i class="fas fa-phone" id="call"></i>
+                <i class="fab fa-whatsapp" id="whatsapp"></i>
             </div>
+            <i class="fas fa-arrow-up" id="scrollUp"></i>
     </body>
 </html>
