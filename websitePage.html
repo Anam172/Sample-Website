@@ -6,47 +6,73 @@
         <title>
             COCO Extensions - COCOShades
         </title>
+        <link rel="icon" type="image/x-icon" href="https://files.cdn-files-a.com/uploads/9376397/400_filter_nobg_668fb89eb8b6a.png">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        <script src="functionality.js" defer></script>
+        <script src="script.js" defer></script>
     </head>
     <body>
         <header>
           <div class="header-bar">
-            <div>
-            <img src="https://files.cdn-files-a.com/uploads/9376397/400_filter_nobg_668fb89eb8b6a.png" alt="COCO-Extensions" style="max-width: 50px;">
+            <div class="Wrapper">
+            <img src="https://files.cdn-files-a.com/uploads/9376397/400_filter_nobg_668fb89eb8b6a.png" alt="COCO-Extensions">
             <span>COCO Extensions</span>
             </div>
           <nav>
             <ul>
-                <li>
+                <li class="navLink">
                     <a href="#hero" class="active">Home</a>
                 </li>
-                <li>
+                <li class="navLink">
                     <a href="#about">About</a>
                 </li>
-                <li>
+                <li class="navLink">
                     <a href="#categories">Store</a>
                 </li>
-                <li>
+                <li class="navLink">
                     <a href="#services">Services</a>
                 </li>
-                <li>
+                <li class="navLink">
                     <a href="#testimonials">Testimonials</a>
                 </li>
-                <li>
+                <li class="navLink">
                     <a href="#contact">Contact</a>
                 </li>
-                <li>
-                    <a style="border: none;"><i class="fas fa-shopping-cart"></i></a>
+                <li class="navImg">
+                    <a style="border: none;"><i class="fas fa-shopping-cart"  onclick="openNav()"></i></a>
                 </li>
-                <li>
-                    <a style="border: none;"><i class="fas fa-envelope"></i></a>
+                <li class="navImg">
+                    <a style="border: none;"><i class="fas fa-envelope" onclick="openForm()"></i></a>
                 </li>
             </ul>
           </nav>
           </div>
         </header>
+        <div id="sidenav" class="sidenav">
+            <div class="sidenav-header">
+            <h2>Your Cart</h2>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            </div>
+            <p>Your shopping cart is empty</p>
+            <button class="btn">Continue Shopping</button>
+        </div>
+        <div class="topSlider" id="topSlider">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeForm()">&times;</a>
+            <div class="Content">
+            <h1>Contact Us</h1> 
+            <p>Fill out the form or send a direct email to: bethdonaldson6mw@gmail.com</p>
+            <form>
+                <label>Full Name</label>
+                <input type="text" id="name" placeholder="Full Name">
+                <label>Email Address</label>
+                <input type="email" id="email" placeholder="Email Address">
+                <label>Description</label>
+                <textarea id="message" placeholder="Description" rows="5"></textarea>
+                <button type="submit" class="btn" >Contact Us</button>
+            </form>
+            </div>
+        </div>
+        <main>
         <section class="hero" id="hero">
             <div class="main-data">
                 <h1><span style="color: #d0ae81;">COCO</span> Shades Extensions</h1>
@@ -109,19 +135,19 @@
                 <h1>Services</h1>
                 <hr style="border-bottom: 4px solid #d0ae81; width: 20%;">
                 <div class="sections">
-                      <div class="section" style="background-image: url(https://files.cdn-files-a.com/uploads/9376397/800_gi-668ebe1010cd7.jpg); width: 500px;height: 300px; background-repeat: no-repeat;">
+                      <div class="sectionImg" style=" background-image: url(https://files.cdn-files-a.com/uploads/9376397/800_gi-668ebe1010cd7.jpg);">
                       </div>
                       <div class="section">
                         <h2>Tape-In Extensions</h2>
                         <p>Achieve a natural and seamless look with our tape-in extensions. Ideal for adding length and fullness.</p>
                       </div>
-                      <div class="section" style="background-image: url(https://files.cdn-files-a.com/uploads/9376397/800_gi-668ebe82cbd60.jpg); width: 500px; height: 300px; background-repeat: no-repeat;">
+                      <div class="sectionImg" style="background-image: url(https://files.cdn-files-a.com/uploads/9376397/800_gi-668ebe82cbd60.jpg);">
                       </div>
                       <div class="section">
                         <h2>Clip-In Extensions</h2>
                         <p>Easy-to-use clip-in extensions for instant length and volume that can be applied at home or by our professionals.</p>
                       </div>
-                      <div class="section" style="background-image: url(https://files.cdn-files-a.com/uploads/9376397/800_gi-668ebe4d74e99.jpg); width: 500px;height: 300px; background-repeat: no-repeat;">
+                      <div class="sectionImg" style="background-image: url(https://files.cdn-files-a.com/uploads/9376397/800_gi-668ebe4d74e99.jpg);">
                       </div>
                       <div class="section">
                         <h2>Custom Color Matching</h2>
@@ -153,12 +179,12 @@
                     </div>
                 </div>
             </section>
-            <div style="background-image: url(https://files.cdn-files-a.com/uploads/9376397/2000_668fb80fd4b09.png); height: 800px; background-position: center;">
+            <div class="main-wrapper" style="background-image: url(https://files.cdn-files-a.com/uploads/9376397/2000_668fb80fd4b09.png);">
             </div>
             <section class="contact" id="contact">
                 <h1>Contact</h1>
                 <hr style="border-bottom: 4px solid #d0ae81; width: 20%;">
-                <div class="flex">
+                <div class="flex1">
                     <div class="content">
                     <p>United Kingdom</p>
                     <a href=""><span style="color: #d0ae81;"><i class="fas fa-phone" style="margin-right: 10px;" ></i>+44-7512307397</span></a><br>
@@ -167,9 +193,9 @@
                 </div>
                 
                     <form>
-                        <div style="display: flex; gap: 30px; justify-content: space-around;">
-                        <input type="text" id="name" placeholder="NAME"  style="flex: 1; padding: 1.5em;">
-                        <input type="tel" id="phone" placeholder="PHONE" style="flex: 1; padding: 1.5em;">
+                        <div class="formInput">
+                        <input type="text" id="name" placeholder="NAME" class="formInputs">
+                        <input type="tel" id="phone" placeholder="PHONE" class="formInputs">
                         </div>
                         <input type="email" id="email" placeholder="EMAIL">
                         <textarea id="message" placeholder="MESSAGE" rows="5"></textarea>
@@ -177,6 +203,7 @@
                     </form>
                 </div>
             </section>
+            </main>
             <footer class="wrapper2">
                     <ul>
                         <li>

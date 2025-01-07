@@ -11,12 +11,12 @@ window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
         let offset = sec.offsetTop ;
-        let height = window.offsetHeight;
+        let height = window.innerHeight;
         let id = sec.getAttribute('id');
 
-        if(top >= offset && top < offset + height) {
+        if(top >= offset -height / 2 && top < offset + height) {
             navLinks.forEach(links => {
-                links.classList.remove("active");
+                links.classList.remove('active');
                 document.querySelector('header nav ul li a[href*=' + id + ']').classList.add('active');
             });
         };
@@ -30,4 +30,20 @@ document.querySelector('.btn-categories').addEventListener('click', function() {
 document.querySelector('.btn-contact').addEventListener('click', function() {
     document.getElementById('contact').scrollIntoView({ behavior: 'smooth'});
 });
+
+function openNav() {
+    document.getElementById("sidenav").style.width = "350px";
+}
+  
+function closeNav() {
+    document.getElementById("sidenav").style.width = "0";
+}
+
+function openForm(){
+    document.getElementById("topSlider").style.display = "flex";
+}
+function closeForm(){
+    document.getElementById("topSlider").style.display = "none";
+}
+
 

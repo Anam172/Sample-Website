@@ -1,19 +1,25 @@
 .header-bar {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-    position: sticky;
+    position:fixed;
     top: 0;
-   overflow: visible;
-    z-index: 1000;
     background-color: white;
-    height: 40px;
+    height: 4vh;
+    width: 97vw;
 }
 .header-bar span{
     font-size: 20px;
     position: relative;
     top: -20px;
+}
+.Wrapper{
+    margin: 0;
+}
+.Wrapper img{
+    width: 50px;
 }
 nav ul {
     list-style: none;
@@ -33,6 +39,99 @@ nav ul li a.active{
     color: #d0ae81;
     border-radius: 20px;
     padding: 5px 10px;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: -2px;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding:0 2px;
+  }
+.sidenav-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    background-color:#d0ae81; 
+    padding: 10px;
+    color: black; 
+    margin-bottom: 20px; 
+}
+.sidenav-header .closebtn {
+    font-size: 32px;
+    color: black; 
+    text-decoration: none; 
+    cursor: pointer; 
+    padding: 5px 10px;
+}
+.sidenav p {
+    margin: 15px ;
+    text-align: center;
+}
+.sidenav .btn {
+    color: #d0ae81; 
+    background-color: white;
+    padding: 10px 15px;
+    border: 1px solid #d0ae81;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.sidenav .btn:hover {
+    background-color: black; 
+    background-color: white;
+    color: black;
+}
+.topSlider {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    background-color: black;
+    overflow-y: hidden;
+    padding: 0;
+  }
+.topSlider .closebtn {
+    font-size: 60px;
+    font-weight: 800;
+    color: white; 
+    text-decoration: none; 
+    cursor: pointer; 
+     float: right;
+     padding-right: 20px;
+}
+.Content {
+    width: 100%;
+    max-width: 700px; /* Limit the width of the form area */
+    background-color: none;
+    padding: 30px; /* Add padding around the content */
+    border-radius: 10px; /* Rounded corners */
+    color: white; /* Text color */
+    margin:10% auto;
+}
+.Content h1{
+    padding-left: 7rem;
+}
+.Content p{
+    padding-left: 7rem;
+}
+.Content form {
+    width: 100%;
+    max-width: 500px;
+    background-color: none;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    color: white;
+    text-align: left;
+    line-height: 3rem;
 }
 .hero {
     display: flex;
@@ -80,7 +179,7 @@ nav ul li a.active{
 }
 .data {
     margin: 15% auto;
-    max-width: 600px;
+    width: 600px;
 
 }
 .data p{
@@ -110,14 +209,12 @@ nav ul li a.active{
 }
 
 .card{
-    width: 300px;
-    height: 300px;
+    max-width: 300px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 20px;
     transition: transform 0.3s;
-    overflow: hidden;
     z-index: 1;
     grid-area: 10px;
 }
@@ -135,7 +232,6 @@ nav ul li a.active{
 }
 .wrapper{
     display: flex;
-
 }
 .container {
     background-color: #f2ece4;
@@ -174,6 +270,11 @@ nav ul li a.active{
     padding-left: 20px;
     padding-right: 20px;
 }
+.sectionImg{
+     width: 500px;
+     height: 300px; 
+     background-repeat: no-repeat;
+}
 .testimonials{
     text-align: center;
     padding: 2em;
@@ -182,8 +283,8 @@ nav ul li a.active{
 .flex {
     display: flex;
     justify-content: center;
-    gap: 20px;
     padding: 2em;
+    gap: 40px;
 }
 .checked{
     color: orange;
@@ -198,6 +299,10 @@ nav ul li a.active{
 .container1 p{
     font-weight: 300;
 }
+.main-wrapper{
+    height: 800px;
+    background-position: center;
+}
 .contact{
     text-align: center;
     background-color: #f2ece4;
@@ -210,16 +315,14 @@ nav ul li a.active{
 form {
     max-width: 500px;
     text-align: left;
-    line-height: 6em;
-    overflow: hidden;
+    line-height: 8rem;
 }
 form input,
 form textarea{
-    width: 89%;
+    width: 100%;
     padding: 1.5rem;
     border-radius: 5px;
-    
-
+    border: 1px solid rgb(102, 99, 99);
 }
 .btn {
     display: inline-block;
@@ -230,13 +333,27 @@ form textarea{
     line-height: 20px;
     cursor: pointer;
 }
+.formInput{
+    display: flex; 
+    gap: 30px; 
+    justify-content: space-between;
+}
+.formInputs{
+    flex-direction: column;
+    max-width: 50%;
+}
 .content{
     line-height: 2rem;
-    margin-right: 20em;
-    
+    margin-top: 5rem;   
 }
 .content a{
     text-decoration: none;
+}
+.flex1{
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+    gap: 40px;
 }
 .wrapper2{
     margin: 2em;
@@ -341,142 +458,273 @@ form textarea{
 html{
     scroll-behavior: smooth;
 }
-/* Responsive Queries */
-@media (max-width: 1200px) {
-    .header-bar {
-      flex-wrap: wrap;
-      padding: 0.5rem;
-    }
-    .header-bar span {
-      font-size: 18px;
-    }
-    nav ul {
-      gap: 0.5rem;
-    }
-    nav ul li a {
-      font-size: 16px;
-    }
-  }
-  
-  @media (max-width: 992px) {
-    .hero {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .main-data {
-      margin: 50px auto;
-      padding: 1rem;
-      width: auto;
-    }
-    .main-data h1 {
-      font-size: 2.5em;
-    }
-    .main-data p {
-      font-size: 1.5em;
-    }
-    .main-data button {
-      font-size: 14px;
-      padding: 0.8rem 1.2rem;
-    }
-    .hero img {
-      width: 100%;
-    }
-    .about {
-      flex-direction: column;
-      padding: 2em;
-    }
-    .about img {
-      width: 100%;
-      margin: 0;
-    }
-    .data {
-      margin: 2em auto;
-      text-align: center;
-    }
-    .data h2 {
-      font-size: 2em;
-    }
+/* Add responsive design */
 
-    .wrapper{
-        width: 100%;
-        overflow: hidden;
+@media (max-width: 768px) {
+    nav{
+        justify-content: end;
+        width: 75% !important;
+    }
+    nav ul{
+        gap: 0;
+    }
+    .navImg{
+        display: none;
+    }
+    .main-data{
+        margin: 0;
+        padding: 4rem;
+    }
+    .hero img{
+        width: 40% !important;
+    }
+    .about img{
+       width: 60% !important;
+       height: 500px !important;
+    }
+    .data{
+        margin-top: 0;
+        padding: 0 20px;
+    }
+    .store{
+        row-gap: 20px;
+    }
+    .wrapper img{
+        width: 60% !important;
     }
     .container{
-        margin: 50px auto;
-      padding: 1rem;
-      width: 100%;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .store {
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .card {
-      width: 100%;
-      height: 200px;
-    }
-    .sections {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-    .container {
-      width: 100%;
-      padding: 2em;
+        padding: 5px;    
+        width: 300px !important;
     }
     .container h1 {
-      font-size: 3em;
+        font-size: 2rem;
     }
-    .container p {
-      font-size: 1em;
-      line-height: 1.5em;
+    .container p{
+        line-height: none;
     }
-  }
-  
-  @media (max-width: 576px) {
-    .header-bar {
-      flex-direction: column;
-      align-items: flex-start;
+    .sections{
+        grid-template-columns: repeat(2,3fr);
     }
-    nav ul {
-      flex-direction: column;
-      gap: 0.5rem;
+    .section{
+        width: 300px !important;
     }
-    .hero {
-      padding: 1em;
+    .sectionImg{
+        width: 300px !important;
     }
-    .main-data h1 {
-      font-size: 2em;
+    .wrapper2 ul{
+        margin: 2rem !important;
     }
-    .main-data p {
-      font-size: 1.2em;
+    .flex{
+        gap: 20px;
     }
-    .main-data button {
-      font-size: 12px;
-      padding: 0.6rem 1rem;
+    .content{
+        margin: 5rem 20px;
     }
-    .about {
-      padding: 1em;
+    form{
+        overflow: hidden;
     }
-    .categories {
-      padding: 2em;
+    #scrollUp{
+        right: 13% !important;
     }
-    .card {
-      height: 150px;
+}
+@media (max-width: 320px) {
+    .Wrapper img{
+       width: 30px !important;
     }
-    .sections {
-      grid-template-columns: 1fr;
-      gap: 10px;
+    .Wrapper span{
+        font-size: 14px !important;
+
     }
-    form input, form textarea {
-      width: 100%;
-      padding: 1rem;
+    nav{
+        width: 5% !important;
     }
-    .flex {
-      flex-direction: column;
-      align-items: center;
+    .navLink{
+        display: none;
     }
-  }
+   .navImg{
+    display: block;
+    padding: 5px;
+   }
+   .hero{
+    flex-direction: column !important;
+    background-color: rgba(247, 245, 245, 0.521);
+    width: 100vw !important;
+   }
+   .main-data{
+    width: 500px !important;
+   }
+   .hero img{
+    width: 100% !important;
+   }
+   .about{
+    flex-direction: column-reverse;
+    text-align: left;
+    width: 100vw !important;
+   }
+   .data{
+    width: 250px !important;
+   }
+   .about img{
+    width: 100% !important;
+   }
+   .categories{
+    width: 100vw !important;
+   }
+   .store{
+    padding: 0 !important;
+    row-gap: 20px;
+    width: 400px !important;
+   }
+   .wrapper{
+    flex-direction: column-reverse;
+    background-color: #f2ece4;
+    width: 100vw;
+   }
+   .wrapper img{
+    width: 100% !important;
+   }
+   .container h1{
+    padding-left: 5rem;
+   }
+   .container p{
+    line-height: 2rem ;
+   }
+   .services{
+    width: 100vw !important;
+   }
+   .sections{
+    grid-template-columns: repeat(1,6fr);
+   }
+   .sectionImg{
+    width: 340px !important;
+   }
+   .testimonials{
+    width: 100vw !important;
+   }
+   .flex{
+    flex-direction: column;
+   }
+   .flex1{
+    flex-direction: column;
+   }
+   .main-wrapper{
+    width: 100vw !important;
+   }
+   .contact{
+    width: 100vw !important;
+   }
+   .wrapper2 ul{
+    padding: 0px;
+    width: auto;
+    gap: 0;
+   }
+   .wrapper2{
+    width: 410px !important;
+   }
+   .wrapper2 p{
+    text-align: end;
+   }
+   #chat{
+    right: 10rem !important;
+   }
+   #social-icons{
+    right: 10rem !important;
+   }
+   #scrollUp{
+    right: 15rem !important;
+   }
+}
+@media (max-width: 480px) {
+    .Wrapper img{
+        width: 30px !important;
+     }
+     .Wrapper span{
+         font-size: 14px !important;
+ 
+     }
+     nav{
+         width: 45% !important;
+     }
+     .navLink{
+         display: none;
+     }
+    .navImg{
+     display: block;
+     padding: 5px;
+    }
+    .hero{
+     flex-direction: column !important;
+     background-color: rgba(247, 245, 245, 0.521);
+    }
+    .main-data{
+     width: 300px !important;
+     padding: 2rem;
+    }
+    .hero img{
+     width: 100% !important;
+    }
+    .about{
+     flex-direction: column-reverse;
+     text-align: left;
+    }
+    .data{
+     width: 200px !important;
+     padding: 0;
+    }
+    .about img{
+     width: 100% !important;
+     height: 40% !important;
+    }
+    .categories{
+        padding: 2rem;
+    }
+    .store{
+     padding: 0 !important;
+     row-gap: 20px;
+     width: 350px !important;
+     justify-content: flex-start !important;
+    }
+    .wrapper{
+     flex-direction: column-reverse;
+     width: auto !important;
+     background-color: #f2ece4;
+    }
+    .wrapper img{
+     width: 100% !important;
+    }
+    .container h1{
+     padding-left: 5rem;
+    }
+    .container p{
+     line-height: 2rem ;
+    }
+    .sections{
+     grid-template-columns: repeat(1,6fr);
+    }
+    .sectionImg{
+     width: 340px !important;
+    }
+    .flex{
+     flex-direction: column;
+    }
+    .flex1{
+     flex-direction: column;
+    }
+    .wrapper2 ul{
+     padding: 0px;
+     width: 250px  !important;
+     gap: 0;
+     overflow: hidden;
+    }
+    .wrapper2{
+     width: 280px !important;
+     margin: 0;
+    }
+    .wrapper2 p{
+     padding-left: 2rem;
+    }
+    #scrollUp{
+     right: 6rem !important;
+    }
+}
   
