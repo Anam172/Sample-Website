@@ -9,7 +9,7 @@
         <link rel="icon" type="image/x-icon" href="https://files.cdn-files-a.com/uploads/9376397/400_filter_nobg_668fb89eb8b6a.png">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
+        <script src="script.js"></script>
     </head>
     <body>
         <header>
@@ -194,12 +194,20 @@
                 
                     <form>
                         <div class="formInput">
-                        <input type="text" id="name" placeholder="NAME" class="formInputs">
+                        <input type="text" id="name" placeholder="NAME" class="formInputs" required>
                         <input type="tel" id="phone" placeholder="PHONE" class="formInputs">
                         </div>
-                        <input type="email" id="email" placeholder="EMAIL">
+                        <input type="email" id="email" placeholder="EMAIL" required>
                         <textarea id="message" placeholder="MESSAGE" rows="5"></textarea>
-                        <button type="submit" class="btn" >Contact Us</button>
+                        <button type="submit" class="btn" onclick="openPopup()">Contact Us</button>
+                        <div class="popup" id="popup">
+                            <div class="menu">
+                            <h3>Sent!</h3>
+                            <a href="javascript:void(0)" class="closebtn" onclick="closePopup()">&times;</a>
+                            </div>
+                            <p>Thank you for contacting us. We have received your message and will respond to you soon.</p>
+                            <button onclick="closePopup()">OK</button>
+                        </div>
                     </form>
                 </div>
             </section>

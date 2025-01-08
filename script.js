@@ -46,4 +46,11 @@ function closeForm(){
     document.getElementById("topSlider").style.display = "none";
 }
 
+function openPopup(){
+    document.getElementById("popup").style.visibility = "visible";
+}
+function closePopup(){
+    document.getElementById("popup").style.visibility = "hidden";
+}
+
 
